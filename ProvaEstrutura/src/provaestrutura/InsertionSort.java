@@ -8,10 +8,17 @@ public class InsertionSort {
 
     public void algoritmoInsertionSort(int vetor[]) {
 
+        //Irra armazenar uma variavel para poder fazer as comparaçãoes a partir dela.
+        //Para isso que o for iniciaria a partir da segunda posiçã.
         for (i = 1; i < vetor.length; i++) {
+            //A variavel aux recebe o elemento da segunda posição.
             aux = vetor[i];
+            //Onde inicia a comparação
             j = i - 1;
+            //Serve para pegar todos os elementos anteriores a aux menores que ele.
+            //Enquanto algum elemento anterior (determinado pela variavel j) for maior que o valor armazenada em aux.
             while ((j >= 0) && vetor[j] > aux) {
+                //O elemento seguinte recebe o elemento atual da variavel j.
                 vetor[j + 1] = vetor[j];
                 j = j - 1;
             }
