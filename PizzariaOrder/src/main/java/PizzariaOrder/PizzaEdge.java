@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class PizzaEdge {
 
-    int op;
-    String border = "";
-    double valorBorda;
+    int ed;
+    String edge = "";
+    double valueEdge;
     int validador = 0;
     PizzaOrder order = new PizzaOrder();
 
@@ -32,27 +32,27 @@ public class PizzaEdge {
                 + ">>[3] - meia Nutella meia Doce de Leite<<\n"
                 + ">>[4] - Nutella<<\n"
                 + "Insira aqui a borda da pizza: ");
-        op = entrada.nextInt();
+        ed = entrada.nextInt();
 
-        switch (op) {
+        switch (ed) {
             case 1:
-                border = "Cheddar";
+                edge = "Cheddar";
                 break;
 
             case 2:
-                border = "Catupiry";
+                edge = "Catupiry";
                 break;
 
             case 3:
-                border = "meia Nutella meia Doce de Leite";
-                valorBorda = 3;
+                edge = "meia Nutella meia Doce de Leite";
+                valueEdge = 3;
                 break;
 
             case 4:
-                border = "Nutella";
-                valorBorda = 2;
+                edge = "Nutella";
+                valueEdge = 2;
                 break;
         }
-        return border;
+        return edge;
     }
 }

@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 public class DrinkOrder {
 
-    int op;
+    int dr;
     String drink = "";
-    double valorDrink;
+    double valueDrink;
     int validador = 1;
-    ArrayList<String> listaBebidas = new ArrayList();
+    ArrayList<String> listDrink = new ArrayList();
 
     public int validateDrink(int op) {
 
@@ -34,31 +34,31 @@ public class DrinkOrder {
                 + ">>[3] - Suco Pratz 900 ML<<\n"
                 + ">>[4] - Agua Mineral 600 ML<<\n"
                 + "Insira aqui uma bebida: ");
-        op = entrada.nextInt();
+        dr = entrada.nextInt();
 
-        switch (op) {
+        switch (dr) {
             case 1:
-                listaBebidas.add("Coca Cola 2 LT");
-                valorDrink = valorDrink + 9.5;
+                listDrink.add("Coca Cola 2 LT");
+                valueDrink = valueDrink + 9.5;
                 break;
 
             case 2:
-                listaBebidas.add("Cerveja Heineken 330 ML");
-                valorDrink = valorDrink + 6.5;
+                listDrink.add("Cerveja Heineken 330 ML");
+                valueDrink = valueDrink + 6.5;
                 break;
 
             case 3:
-                listaBebidas.add("Suco Pratz 900 ML");
-                valorDrink = valorDrink + 12.5;
+                listDrink.add("Suco Pratz 900 ML");
+                valueDrink = valueDrink + 12.5;
                 break;
 
             case 4:
-                listaBebidas.add("Agua Mineral 600 ML");
-                valorDrink = valorDrink + 3.5;
+                listDrink.add("Agua Mineral 600 ML");
+                valueDrink = valueDrink + 3.5;
                 break;
         }
 
-        return listaBebidas;
+        return listDrink;
 
     }
 

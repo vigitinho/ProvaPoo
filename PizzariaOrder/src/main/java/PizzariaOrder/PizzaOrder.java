@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class PizzaOrder {
 
-    int x = 0;
+    int y = 0;
     double valorTotal;
 
     public static void printWelcomeMessage() {
@@ -31,7 +31,7 @@ public class PizzaOrder {
                 + "Insira aqui o tamanho da pizza: ");
         pizzaSise.orderSize(entrada.nextInt());
 
-        while (x < pizzaSise.qntSabores) {
+        while (y < pizzaSise.qntFlavor) {
             Scanner entrada2 = new Scanner(System.in);
 
             System.out.println(">>SELECIONE UM SABOR DE PIZZA<<\n"
@@ -46,7 +46,7 @@ public class PizzaOrder {
                     + ">>[9] - Abacaxi com Canela<<\n"
                     + "Insira aqui o sabor da pizza: ");
             flavor.orderFlavor(entrada2.nextInt());
-            x++;
+            y++;
         }
 
         if (pizzaSise.validador == 0) {
@@ -59,11 +59,11 @@ public class PizzaOrder {
 
         }
 
-        double valor;
+        double value;
         if (pizzaEdge.validador == 1) {
-            valor = pizzaSise.valorCborda;
+            value = pizzaSise.valueEdge;
         } else {
-            valor = pizzaSise.valorTamanho;
+            value = pizzaSise.valueSize;
         }
 
         while (drink.validador == 1) {
@@ -74,12 +74,12 @@ public class PizzaOrder {
             drink.validateDrink(entrada4.nextInt());
         }
 
-        valorTotal = valor + flavor.valorSabor + pizzaEdge.valorBorda + drink.valorDrink;
+        valorTotal = value + flavor.valueFlavor + pizzaEdge.valueEdge + drink.valueDrink;
 
         System.out.println("O tamanho da pizza e: " + pizzaSise.tamanho);
-        System.out.println("Os sabores escolhidos foram: " + flavor.listaSabores);
-        System.out.println("A borda escolhida foi: " + pizzaEdge.border);
-        System.out.println("A bebida escolhida foi: " + drink.listaBebidas);
+        System.out.println("Os sabores escolhidos foram: " + flavor.listFlavor);
+        System.out.println("A borda escolhida foi: " + pizzaEdge.edge);
+        System.out.println("A bebida escolhida foi: " + drink.listDrink);
         System.out.println("O total do pedido foi: " + valorTotal);
 
     }
